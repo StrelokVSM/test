@@ -1,34 +1,34 @@
 @extends('layouts.app')
 
-@section('title')Контакты@endsection
+@section('title')Обновление записи@endsection
 
 @section('content')
-<h1>Контакты</h1>
+<h1>Обновление записи</h1>
 
-<form action="{{ route('contact-form') }}" method="post">
+<form action="{{ route('contact-update-submit', $data->id )}}" method="post">
   @csrf
 
   <div class="form-group">
     <label for="name">Введите имя</label>
-    <input type="text" name="name" placeholder="Введите имя" id="name" class="form-control">
+    <input type="text" name="name" value="{{$data->name}}" placeholder="Введите имя" id="name" class="form-control">
   </div>
 
   <div class="form-group">
     <label for="name">Email</label>
-    <input type="text" name="email" placeholder="Email" id="email" class="form-control">
+    <input type="text" name="email" value="{{$data->email}}" placeholder="Email" id="email" class="form-control">
   </div>
 
   <div class="form-group">
     <label for="name">Тема сообщения</label>
-    <input type="text" name="subject" placeholder="Тема сообщения" id="subject" class="form-control">
+    <input type="text" name="subject" value="{{$data->subject}}" placeholder="Тема сообщения" id="subject" class="form-control">
   </div>
 
   <div class="form-group">
     <label for="message">Сообщение</label>
-    <textarea name="message" id="message" placeholder="Введите сообщение" class="form-control"></textarea>
+    <textarea name="message" id="message" placeholder="Введите сообщение" class="form-control">{{$data->message}}</textarea>
   </div>
 
-  <button type="submit" class="btт btn-success">Отправить</button>
+  <button type="submit" class="btт btn-success">Обновить</button>
 </form>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
