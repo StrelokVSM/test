@@ -7,3 +7,16 @@ footer {
   margin-left: 10%;
 }
 
+.bg {
+    border-radius: 5px 5px 80px 5px;
+    /*border-style: double; /* Параметры границы */
+    border-color: #bee5eb;
+    background-color: #d1ecf1;  /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+ }
+
+.bg-hero {
+    background-color: #74992e;
+    padding: 5px;
+    color: white;
+ }
